@@ -46,9 +46,9 @@ cleanup() {
 }
 
 apt install -y curl
-curl -sS https://mirror.bardia.tech/onclite/onclite.gpg | tee /etc/apt/trusted.gpg.d/onclite.gpg
-curl https://mirror.bardia.tech/onclite/onclite.gpg | sudo apt-key add -
-curl -sS -o /etc/apt/sources.list.d/onclite.list https://mirror.bardia.tech/onclite/onclite.list
+curl -sS https://mirror.bardia.tech/sargo/sargo.gpg | tee /etc/apt/trusted.gpg.d/sargo.gpg
+curl https://mirror.bardia.tech/sargo/sargo.gpg | sudo apt-key add -
+curl -sS -o /etc/apt/sources.list.d/sargo.list https://mirror.bardia.tech/sargo/sargo.list
 apt update
 
 tmpdir="$(mktemp -d)"
