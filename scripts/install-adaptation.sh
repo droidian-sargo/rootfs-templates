@@ -45,10 +45,11 @@ cleanup() {
 	[ -e "${tmpdir}" ] && rm -rf "${tmpdir}"
 }
 
-apt install -y curl
+apt install -y curl wget
 curl -sS https://mirror.bardia.tech/sargo/sargo.gpg | tee /etc/apt/trusted.gpg.d/sargo.gpg
 curl https://mirror.bardia.tech/sargo/sargo.gpg | sudo apt-key add -
 curl -sS -o /etc/apt/sources.list.d/sargo.list https://mirror.bardia.tech/sargo/sargo.list
+wget -O /var/lib/lxc/android/android-rootfs.img https://github.com/droidian-sargo/linux-android-google-sargo/releases/download/images/android-rootfs.img
 apt update
 
 tmpdir="$(mktemp -d)"
