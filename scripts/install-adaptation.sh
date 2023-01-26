@@ -49,6 +49,7 @@ apt install -y curl wget
 curl -sS https://mirror.bardia.tech/sargo/sargo.gpg | tee /etc/apt/trusted.gpg.d/sargo.gpg
 curl https://mirror.bardia.tech/sargo/sargo.gpg | sudo apt-key add -
 curl -sS -o /etc/apt/sources.list.d/sargo.list https://mirror.bardia.tech/sargo/sargo.list
+apt purge android-system-gsi-28 -y
 apt update
 
 tmpdir="$(mktemp -d)"
